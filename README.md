@@ -57,7 +57,7 @@ systemctl start hysteria
 然后新建一个config.json文档：
 ```json
 {
-  "server": "[IP地址]:6854",
+  "server": "[IP地址]:[同服务端端口]",
   "auth_str": "[同服务端密码]", 
   "up_mbps": 120, //上传速度，根据实际情况
   "down_mbps": 200,//下载速度，根据实际情况
