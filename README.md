@@ -49,3 +49,28 @@ systemctl daemon-reload
 systemctl enable hysteria
 systemctl start hysteria
 ```
+
+客户端配置：
+
+首先在[点我](https://github.com/apernet/hysteria/releases/download/v1.3.5/hysteria-windows-amd64-avx.exe)下载到v2ray目录下
+
+然后新建一个config.json文档：
+```json
+{
+  "server": "[IP地址]:6854",
+  "auth_str": "[同服务端密码]", 
+  "up_mbps": 120, //上传速度，根据实际情况
+  "down_mbps": 200,//下载速度，根据实际情况
+  "insecure": false,
+  "retry": 3,
+  "socks5": {
+    "listen": "127.0.0.1:10808"
+  },
+  "http": {
+    "listen": "127.0.0.1:10809"
+  },
+  "server_name": "[同服务端域名]",
+  "fast_open": true,
+  "resolve_preference": "46"
+}
+```
